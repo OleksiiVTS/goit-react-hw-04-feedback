@@ -1,0 +1,21 @@
+.buttonFeedback {
+  width: 100px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.good {
+  composes: buttonFeedback;
+  background-color: green;
+}
+
+.neutral {
+  composes: buttonFeedback;
+  background-color: yellow;
+}
+
+.bad {
+  composes: buttonFeedback;
+  background-color: red;
+}
