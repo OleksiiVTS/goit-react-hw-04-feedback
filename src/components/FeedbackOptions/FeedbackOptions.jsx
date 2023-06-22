@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 import css from './FeedbackOptions.module.css';
 
+function nameButton(option) {
+  return option.charAt(0).toUpperCase() + option.slice(1);
+}
+
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return options.map(option => (
     <button
@@ -9,7 +13,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       type="button"
       onClick={onLeaveFeedback}
     >
-      {option}
+      {nameButton(option)}
     </button>
   ));
 };
