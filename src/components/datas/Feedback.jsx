@@ -19,13 +19,12 @@ class Feedback extends Component {
 
   onLeaveFeedback = e => {
     const variable = e.target.textContent.toLowerCase();
-    if (variable === 'good') {
-      this.setState(state => ({ good: (state.good += 1) }));
-    } else if (variable === 'neutral') {
-      this.setState(state => ({ neutral: (state.neutral += 1) }));
-    } else if (variable === 'bad') {
-      this.setState(state => ({ bad: (state.bad += 1) }));
-    }
+
+    this.setState(prevState => {
+      return {
+        [variable]: (prevState[variable] += 1),
+      };
+    });
   };
 
   countTotalFeedback = () => {

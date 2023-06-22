@@ -1,18 +1,10 @@
 import PropTypes from 'prop-types';
 import css from './FeedbackOptions.module.css';
 
-function classSerch(option) {
-  if (option === 'good') {
-    return css.good;
-  } else if (option === 'neutral') {
-    return css.neutral;
-  } else return css.bad;
-}
-
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return options.map(option => (
     <button
-      className={classSerch(option)}
+      className={css[option]}
       key={option}
       type="button"
       onClick={onLeaveFeedback}
