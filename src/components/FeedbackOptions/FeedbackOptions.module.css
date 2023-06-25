@@ -3,6 +3,7 @@
   height: 25px;
   cursor: pointer;
   border-radius: 5px;
+  text-transform: capitalize;
 }
 
 .good {
