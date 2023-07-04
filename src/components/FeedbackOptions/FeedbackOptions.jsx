@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import css from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  // console.Consolelog(options);
   return options.map(option => (
     <button
       className={css[option]}
