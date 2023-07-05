@@ -11,6 +11,9 @@ const Feedback = () => {
   const [total, setTotal] = useState(0);
   const [percentage, setPercentage] = useState(0);
 
+  // Не придумав як ще обійти map() у рендері кнопок
+  const buttons = ['good', 'neutral', 'bad'];
+
   const onLeaveFeedback = option => {
     switch (option) {
       case 'good':
@@ -41,10 +44,7 @@ const Feedback = () => {
   return (
     <>
       <Section title="Please leave feedback">
-        <FeedbackOptions
-          options={['good', 'neutral', 'bad']}
-          onLeaveFeedback={onLeaveFeedback}
-        />
+        <FeedbackOptions options={buttons} onLeaveFeedback={onLeaveFeedback} />
         {total !== 0 ? (
           <Statistics
             good={good}
