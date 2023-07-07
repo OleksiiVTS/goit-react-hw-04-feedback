@@ -31,7 +31,7 @@ const Feedback = () => {
   };
 
   useEffect(() => {
-    setTotal(prevTotal => (prevTotal = good + neutral + bad));
+    setTotal(good + neutral + bad);
   }, [good, neutral, bad]);
 
   useEffect(() => {
